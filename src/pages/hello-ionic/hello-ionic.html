@@ -1,0 +1,45 @@
+<ion-header>
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <img id='logo' src="http://softpathtech.com/img/logo.png">
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+
+  <ion-slides loop="true" pager="true">
+    <ion-slide *ngFor="let img of imgs">
+      <img id='banner' src={{img.location}}>
+    </ion-slide>
+  </ion-slides>
+  <ion-card>
+    <ion-card-content style="text-align:center;">
+      SoftPath Technologies is a Global Technology, Services & Consulting company. We offer a business-centric approach to understand
+      business challenges, we focus on uniting people, processes and technology and leverage our expertise to offer successful
+      outcomes.
+    </ion-card-content>
+  </ion-card>
+
+  <ion-slides loop="true"pager='true'>
+    <ion-slide>
+      <ion-card>
+        <ion-card-header>Enabling Digital Revolution
+          <p>in a Digital Age</ion-card-header>
+        <ion-card-content>
+          <iframe width="100%" height="200px" src="https://www.youtube.com/embed/Qa-h2aDEFec" frameborder="0" allowfullscreen></iframe>
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+    <ion-slide>
+      <ion-card>
+        <ion-card-header>Who We Are?</ion-card-header>
+        <ion-card-content>
+          <iframe width="100%" height="200px" src="https://www.youtube.com/embed/NGrdJz6ZsWg" frameborder="0" allowfullscreen></iframe>
+        </ion-card-content>
+      </ion-card>
+    </ion-slide>
+  </ion-slides>
+</ion-content>

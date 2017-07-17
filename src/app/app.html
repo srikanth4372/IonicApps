@@ -1,0 +1,28 @@
+<ion-menu [content]="content">
+
+  <ion-header>
+    <ion-toolbar>
+      <img id='logo' src="http://softpathtech.com/img/logo.png">   
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content>
+    <ion-list>
+      <button ion-item *ngFor="let p of pages" (click)="openPage(p)" style="font-weight: bold;">
+        {{p.title}}
+      </button>
+    </ion-list>
+    <h1 style="text-align:center;">Awards</h1>
+    <ion-grid>
+      <ion-row >
+        <ion-col col-6 *ngFor="let award of awards">
+          <img src={{award.img}} >
+        </ion-col>
+        
+      </ion-row>
+    </ion-grid>
+  </ion-content>
+
+</ion-menu>
+
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

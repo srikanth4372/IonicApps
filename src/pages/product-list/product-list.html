@@ -1,0 +1,27 @@
+<ion-header>
+
+  <ion-navbar>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Products</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content>
+  <ion-slides loop='true' pager='true'>
+  
+      <ion-slide *ngFor="let x of products">
+        <ion-card  >
+          <ion-card-header>{{x.title}}</ion-card-header>
+          <ion-card-content>{{x.description}}
+            <p style="font-weight:bold;">Technologies</p>
+            <p>{{x.technologies}}</p>
+          </ion-card-content>
+        </ion-card>
+      </ion-slide>
+    
+  </ion-slides>
+</ion-content>
